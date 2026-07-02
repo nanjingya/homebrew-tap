@@ -16,7 +16,7 @@ cask "aurora-music" do
 
   app "Aurora Music.app"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   postflight do
     system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Aurora Music.app"]
